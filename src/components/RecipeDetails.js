@@ -19,14 +19,23 @@ const RecipeDetails = ({ recipe }) => {
       dispatch({ type: "DELETE_RECIPE", payload: json });
     }
   };
-  
+
+  const durationToString = (duration) => {
+    const date = new Date(duration * 1000);
+    let hrs = "";
+    if (date.getUTCHours() > 0) {
+        hrs = date.getUTCHours() + "hrs "
+    }
+    return hrs.concat(date.getUTCMinutes() + " min");
+  };
+
   return (
       <div className="menu-details">
         <h4>Name: {recipe.name}</h4>
-        <p>Time of preparation: {recipe.preparation}</p>
-        <p>Time of cooking: {recipe.cooking}</p>
+        <p>Time of preparation: {durationToString(recipe.prepTimeSec)}</p>
+        <p>Time of cooking: {durationToString(recipe.cookTimeSec)}</p>
         <p>Ingredients: {recipe.ingredients}</p>
-        <p>Recipe: {recipe.text}</p>
+        <p>Recipe: {recipe.instruction}</p>
         <span className="material-symbols-outlined" onClick={handleClick}>
           delete
         </span>
