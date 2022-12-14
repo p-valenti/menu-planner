@@ -2,7 +2,7 @@ import { Navbar } from "./components/Navbar"
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import Recipes from "./pages/Recipes";
-import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
+import { HashRouter, Routes, Route, Navigate } from 'react-router-dom'
 import { useAuthContext } from "./hooks/useAuthContext";
 import Menu from './pages/Menu';
 import Home from './pages/Home'
@@ -11,7 +11,7 @@ function App() {
   const { user } = useAuthContext()
   return (
     <div className='App'>
-      <BrowserRouter basename={`/${process.env.PUBLIC_URL}`}>
+      <HashRouter basename={`/${process.env.PUBLIC_URL}`}>
         <Navbar />
         <div className='pages'>
           <Routes>
@@ -37,7 +37,7 @@ function App() {
             />
           </Routes>
         </div>
-      </BrowserRouter>
+      </HashRouter>
     </div>
   );
 }
