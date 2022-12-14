@@ -2,7 +2,7 @@
   "proxy": "https://menu-2v5y.onrender.com",
   "name": "menu",
   "version": "0.1.0",
-  "homepage": ".",
+  "homepage": "https://p-valenti.github.io/menu-planner/",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
