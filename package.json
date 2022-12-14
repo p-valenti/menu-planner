@@ -2,7 +2,7 @@
   "proxy": "http://localhost:4000",
   "name": "menu",
   "version": "0.1.0",
-  "homepage": "https://p-valenti.github.io/menu",
+  "homepage": "https://p-valenti.github.io/menu-planner",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
