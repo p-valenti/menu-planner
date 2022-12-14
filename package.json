@@ -1,5 +1,5 @@
 {
-  "proxy": "http://localhost:4000",
+  "proxy": "https://menu-2v5y.onrender.com",
   "name": "menu",
   "version": "0.1.0",
   "homepage": "https://p-valenti.github.io/menu-planner",
