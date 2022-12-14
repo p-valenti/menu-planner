@@ -11,7 +11,7 @@ function App() {
   const { user } = useAuthContext()
   return (
     <div className='App'>
-      <BrowserRouter basename={`/${process.env.PUBLIC_URL}/`}>
+      <BrowserRouter basename='/menu-planner/'>
         <Navbar />
         <div className='pages'>
           <Routes>
