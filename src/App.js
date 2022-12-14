@@ -11,7 +11,7 @@ function App() {
   const { user } = useAuthContext()
   return (
     <div className='App'>
-      <BrowserRouter basename="https://menu-planner.onrender.com/">
+      <BrowserRouter basename=".">
         <Navbar />
         <div className='pages'>
           <Routes>
