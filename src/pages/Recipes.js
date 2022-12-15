@@ -9,7 +9,7 @@ const Recipes = () => {
   const { user } = useAuthContext();
   useEffect(() => {
     const fetchRecipes = async () => {
-      const response = await fetch("${process.env.REACT_APP_API_PROXY}/api/recipes", {
+      const response = await fetch(`${process.env.REACT_APP_API_PROXY}/api/recipes`, {
         headers: {
           Authorization: `Bearer ${user.token}`,
         },

@@ -36,7 +36,7 @@ const MenuForm = () => {
         }
         const menu = {date, title, list}
         let body = JSON.stringify(menu);
-        const response = await fetch('${process.env.REACT_APP_API_PROXY}/api/menus', {
+        const response = await fetch(`${process.env.REACT_APP_API_PROXY}/api/menus`, {
             method: 'POST',
             body: body,
             headers: {

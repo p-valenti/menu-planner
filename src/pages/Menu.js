@@ -9,7 +9,7 @@ const Menu = () => {
     const {user} = useAuthContext()
     useEffect(() => {
         const fetchMenus = async () => {
-            const response = await fetch('${process.env.REACT_APP_API_PROXY}/api/menus', {
+            const response = await fetch(`${process.env.REACT_APP_API_PROXY}/api/menus`, {
                 headers: {
                     'Authorization': `Bearer ${user.token}`
                 }
