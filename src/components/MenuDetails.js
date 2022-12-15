@@ -11,7 +11,7 @@ const MenuDetails = ({menu}) => {
         if (!user) {
             return
         }
-        const response = await fetch('/api/menus/' + menu._id, {
+        const response = await fetch('${process.env.REACT_APP_API_PROXY}/api/menus/' + menu._id, {
             method: 'DELETE',
             headers: {
                 'Authorization': `Bearer ${user.token}`

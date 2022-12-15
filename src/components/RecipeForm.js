@@ -30,7 +30,7 @@ const RecipeForm = () => {
         const prepTimeSec = toSeconds(prepTime);
         const cookTimeSec = toSeconds(cookTime)
         const recipe = {name, prepTimeSec, cookTimeSec, ingredients, instruction}
-        const response = await fetch('/api/recipes', {
+        const response = await fetch('${process.env.REACT_APP_API_PROXY}/api/recipes', {
             method: 'POST',
             body: JSON.stringify(recipe),
             headers: {
